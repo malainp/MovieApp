@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_popular"
+        android:icon="@drawable/ic_popular"
+        android:orderInCategory="0"
+        android:title="Popular" />
+    <item
+        android:id="@+id/navigation_top_rated"
+        android:icon="@drawable/ic_top_rated"
+        android:orderInCategory="1"
+        android:title="Top Rated" />
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_movie_search"
+        android:orderInCategory="2"
+        android:title="Search" />
+</menu>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">MAlain movies</string>
+    <string name="title_activity_movie_detail">MovieDetail</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="movie_detail_overview">Overview</string>
+    <string name="movie_detail_genres">Genres</string>
+    <string name="movie_detail_info">Info &amp; Rating</string>
+    <string name="movie_detail_videos">Videos</string>
+    <string name="movie_detail_produced_by">Produced by</string>
+    <string name="movie_detail_ratio">🗓 Released at %1s\n🗳 %2d votes\n⭐️ %3f average\n%3s</string>
+
+    <string name="search_no_results">No results</string>
+    <string name="search_no_connection">This function needs an internet connection</string>
+    <string name="search_no_query">Type something to start searching…</string>
+
+    <string name="video_name">🎥 %1s</string>
+
+    <string name="url_movie_image">https://image.tmdb.org/t/p/original%1s</string>
+    <string name="url_videos">https://www.youtube.com/embed/%1s?autoplay=1&amp;vq=small</string>
+</resources>

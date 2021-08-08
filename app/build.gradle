@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "mx.malain.movieapp"
+        minSdk 23
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation":"$projectDir/schemas".toString(),
+                        "room.incremental":"true",
+                        "room.expandProjection":"true"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "com.microsoft.appcenter:appcenter-analytics:4.1.0"
+    implementation "com.microsoft.appcenter:appcenter-crashes:4.1.0"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:+"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:+"
+    implementation 'com.github.bumptech.glide:glide:+'
+    annotationProcessor 'com.github.bumptech.glide:compiler:+'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.dagger:hilt-android:2.37'
+    kapt 'com.google.dagger:hilt-compiler:2.37'
+
+    implementation "androidx.room:room-runtime:2.3.0"
+    implementation "androidx.room:room-ktx:2.3.0"
+    kapt "androidx.room:room-compiler:2.3.0"
+    //kapt 'android.arch.persistence.room:compiler:1.1.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'jp.wasabeef:recyclerview-animators:4.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:+'
+    implementation "com.squareup.retrofit2:converter-gson:+"
+    implementation 'com.squareup.okhttp:okhttp:+'
+    implementation "com.google.code.gson:gson:+"
+
+    implementation "androidx.fragment:fragment-ktx:+"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:+"
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test:core:1.1.0'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    testImplementation 'androidx.arch.core:core-testing:2.0.1'
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0"
+}
